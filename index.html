@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innovative Money-Making Strategies</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- TOS & Disclaimer Modal -->
+    <div id="tosModal" class="modal fade-in">
+      <div class="modal-content floaty">
+        <h2>Legal Disclaimer &amp; Extremely Long Terms of Service</h2>
+        <p>
+          <strong>DISCLAIMER:</strong> Welcome to
+          <em>Innovative Money-Making Strategies</em>, a website conceived
+          entirely for satirical and entertainment purposes. All references,
+          ideas, and “opportunities” described herein are outright works of
+          fiction, heavily exaggerated to parody unethical or questionable
+          practices. Under no circumstances should any information on this site
+          be interpreted as genuine legal, financial, or professional advice.
+        </p>
+        <p>
+          We do not endorse or encourage illegal, immoral, or otherwise
+          inadvisable behavior—our content is purely for comedic effect. Nothing
+          here should be taken seriously, tested, or reenacted in real life. Any
+          attempt to do so is entirely at your own risk, and we disclaim any and
+          all liability to the fullest extent permitted by law.
+        </p>
+        <p>
+          In today’s dynamic digital era, we strongly emphasize that every
+          suggestion on this site is fictional. Any resemblance to real events,
+          individuals, or organizations is purely coincidental. We are not
+          responsible for any consequences, direct or indirect, that might arise
+          from you reading or misreading our satirical “strategies.” We repeat:
+          <em>this is all just jokes.</em>
+        </p>
+
+        <p>
+          <strong>TERMS OF SERVICE (Massively Extended):</strong><br />
+          1. You recognize that this entire website is a parody, and all
+          “money-making strategies” are presented solely for amusement.<br />
+          2. You affirm that no real advice—legal, financial, or otherwise— can
+          be derived from these outlandish fictional narratives.<br />
+          3. You accept that any resemblance to actual practices is unintended
+          and coincidental, and we disclaim all liability associated with any
+          real-world application of these farcical ideas.<br />
+          4. You agree not to hold our team or any affiliated parties liable for
+          personal decisions you might make after reading these comedic
+          sketches.<br />
+          5. You understand that we reserve the right to revise, expand, remove,
+          or otherwise modify any portion of the website content (including
+          disclaimers, TOS, comedic examples, images, or pop-up text) whenever
+          we see fit, without prior notice.<br />
+          6. By using this site, you agree to forever waive, release, and hold
+          harmless our team, owners, affiliates, or contributors from any and
+          all claims, demands, or causes of action—whether now known or arising
+          in the future—relating to or arising out of your engagement with this
+          satirical content, to the fullest extent permissible by law.<br />
+          7. You further agree to defend and indemnify us from any claim or
+          demand brought by third parties due to or arising out of your breach
+          of these TOS, or your violation of any law or regulation relating to
+          your use of the site.<br />
+          8. Your continued use of this website confirms your acceptance of
+          these ridiculously thorough terms, disclaimers, comedic disclaimers,
+          and hypothetical disclaimers contained herein.<br />
+          9. If you do not fully agree with every portion of these disclaimers
+          and terms, you must leave the site immediately. Seriously, go.
+        </p>
+
+        <p>
+          <strong>Important Reminder on Liability:</strong> Any legal or
+          financial claims you believe you have against us become null and void
+          once you engage with this site. If you try to sue us for these comedic
+          “strategies,” we reserve the right to point vigorously at this
+          disclaimer while giggling uncontrollably.
+        </p>
+
+        <p>
+          By checking the boxes below and typing the required text, you express
+          your acknowledgment of our site’s satirical nature and certify that
+          you release us from all potential legal claims arising from your
+          real-life actions or misinterpretations.
+        </p>
+
+        <!-- Checkboxes -->
+        <div class="checkbox-group">
+          <input type="checkbox" id="check1" />
+          <label for="check1"
+            >I understand everything here is fictional and purely
+            satirical.</label
+          >
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="check2" />
+          <label for="check2"
+            >I accept that none of these “strategies” constitutes real
+            advice.</label
+          >
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="check3" />
+          <label for="check3"
+            >I verify any resemblance to real events is completely
+            coincidental.</label
+          >
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="check4" />
+          <label for="check4"
+            >I confirm that I’m a human being, not an automated script.</label
+          >
+        </div>
+        <p>
+          <strong>FINAL CONFIRMATION:</strong> To absolutely ensure you read
+          this, please type "<em>Yes</em>" below:
+        </p>
+        <div class="input-field">
+          <input type="text" id="finalInput" placeholder="Type 'Yes'" />
+        </div>
+        <button id="agreeButton" disabled>Agree &amp; Continue</button>
+      </div>
+    </div>
+
+    <!-- Category Plans Modal -->
+    <div id="categoryPlansModal" class="modal fade-in">
+      <div class="modal-content">
+        <button class="modal-close" id="closeCategoryModal">&times;</button>
+        <div id="categoryPlansContent"></div>
+      </div>
+    </div>
+
+    <!-- Plan Detail Modal -->
+    <div id="planDetailModal" class="modal fade-in">
+      <div class="modal-content">
+        <button class="modal-close" id="closePlanModal">&times;</button>
+        <div id="planDetailContent"></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fade-in floaty">
+      <h1>🔥 Money Strategies for the Bold 🔥</h1>
+      <nav>
+        <button onclick="openCategoryPlans('physical')">
+          Physical Ventures
+        </button>
+        <button onclick="openCategoryPlans('online')">Online Ventures</button>
+        <button onclick="openCategoryPlans('passive')">Passive Income</button>
+        <button onclick="openCategoryPlans('creative')">
+          Creative Ventures
+        </button>
+        <button onclick="openCategoryPlans('weird')">
+          Unconventional Ideas
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+      <h2 class="floaty">Totally legal money making strategies*</h2>
+      <p>*But purely satirical, comedic, and definitely not legally binding.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fade-in">
+      <p>&copy; 2025 Not A Real Company Inc. No rights reserved.</p>
+      <p><a href="#" id="openTOSFooter">View Terms of Service</a></p>
+    </footer>
+
+    <!-- Link to External JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

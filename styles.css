@@ -1,0 +1,272 @@
+/* CSS Variables for Colors & Gradients */
+:root {
+  --primary: #0077cc;
+  --secondary: #005fa3;
+  --bg-gradient: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  --header-bg: linear-gradient(135deg, #004e92, #000428);
+  --modal-bg: rgba(0, 0, 0, 0.85);
+}
+
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg-gradient);
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Floating & Fade-In Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.floaty {
+  animation: float 3s ease-in-out infinite;
+}
+.fade-in {
+  animation: fadeIn 0.75s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header with Centered Navigation */
+header {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+nav {
+  display: flex;
+  gap: 15px;
+}
+nav button {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+}
+nav button:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://source.unsplash.com/1600x900/?ocean,flow")
+    center/cover no-repeat;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+.hero h2 {
+  position: relative;
+  font-size: 2.8rem;
+  z-index: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.section-title {
+  font-size: 1.8rem;
+  color: #001a3d;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+footer p {
+  margin: 5px 0;
+}
+footer a {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+/* Modal Styles (Used for TOS, Category Plans, and Plan Details) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 4000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--modal-bg);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal-content {
+  background: #fff;
+  color: #333;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px;
+  padding: 30px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+.modal-content p,
+.modal-content ul {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+.modal-content ul {
+  margin-left: 20px;
+}
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
+.modal-close:hover {
+  color: #333;
+}
+
+/* TOS checkboxes + final text input */
+.checkbox-group {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+.checkbox-group label {
+  margin-left: 10px;
+  font-size: 0.95rem;
+}
+.input-field {
+  margin-top: 15px;
+}
+.input-field input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.modal-content button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+.modal-content button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.modal-content button:hover:not(:disabled) {
+  background: var(--secondary);
+}
+
+/* Category / Plan List item styling (for categoryPlansModal) */
+.plan-list {
+  list-style: none;
+  margin-top: 10px;
+}
+.plan-list li {
+  background: #f8f9fa;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.plan-list li:hover {
+  background: #e9ecef;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
